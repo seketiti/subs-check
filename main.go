@@ -197,11 +197,11 @@ func (app *App) Run() {
 			slog.Error(fmt.Sprintf("检测代理失败: %v", err))
 			os.Exit(1)
 		}
+		os.Exit(0)
 
 		nextCheck := time.Now().Add(time.Duration(app.interval) * time.Minute)
 		slog.Info(fmt.Sprintf("下次检查时间: %s", nextCheck.Format("2006-01-02 15:04:05")))
 		time.Sleep(time.Duration(app.interval) * time.Minute)
-		os.Exit(0)
 	}
 }
 
