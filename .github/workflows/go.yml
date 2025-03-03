@@ -3,10 +3,7 @@
 
 name: Go
 on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+  workflow_dispatch:
 permissions:
   contents: write  # 允许写权限以提交
 jobs:
